@@ -5,8 +5,9 @@ import Styles from '../Styles/Styles';
 export default class ButtonListen extends React.Component{
     
     recordAudio(){
-        return console.log("button listen ok")
-        
+        return (
+            console.log("button listen ok")
+        )
     }
 
     render(){

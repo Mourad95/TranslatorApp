@@ -1,24 +1,20 @@
 import React from 'react';
 import {Button} from 'react-native';
+import TranslateView from '../Views/TranslateView'
 import Styles from '../Styles/Styles';
+import { StackNavigator } from 'react-navigation'
 
 export default class ButtonRecord extends React.Component{
     
+    
     recordAudio(){
-        return console.log("button record ok")
-        
+        console.log("Bouton record ok")
     }
 
 
     render(){
-        return(
-            <Button
-            onPress={this.recordAudio}
-            title="Enregistrer"
-            color='#841584'
-            accessibilityLabel="Learn more about this purple button"
-            />
-        )
+        //const { navigate } = this.props.navigation;
+        
 
     }
   
