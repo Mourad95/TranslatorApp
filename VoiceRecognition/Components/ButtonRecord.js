@@ -1,5 +1,7 @@
 import React from 'react';
-import {Button} from 'react-native';
+import { Button } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
 import Styles from '../Styles/Styles';
 
 export default class ButtonRecord extends React.Component{
@@ -13,7 +15,7 @@ export default class ButtonRecord extends React.Component{
     render(){
         return(
             <Button
-            onPress={this.recordAudio}
+            onPress={() => this.props.redirect.navigate('Translate')}
             title="Enregistrer"
             color='#841584'
             accessibilityLabel="Learn more about this purple button"

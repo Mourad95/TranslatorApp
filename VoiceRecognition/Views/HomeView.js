@@ -8,7 +8,7 @@ export default class HomeView extends React.Component {
       return (
           <View>
                 <Text>t'es dans HomeView</Text>
-                <ButtonRecord/>
+                <ButtonRecord redirect={this.props.navigation}/>
           </View>
          
      
