@@ -5,6 +5,9 @@ import ButtonListen from '../Components/ButtonListen'
 import TextsContainer from '../Containers/TextsContainer'
 
 export default class TranslateView extends React.Component {
+  static navigationOptions = {
+    title:'TRANSLATION'
+  }
     render() {
       return (
           <View>

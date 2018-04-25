@@ -8,7 +8,7 @@ import ButtonRecord from '../Components/ButtonRecord'
 export default class HomeView extends React.Component{
 
   static navigationOptions = {
-    title:'HomeView'
+    title:'RECORD'
   }
       render() {
         const navigate = this.props.navigation;
@@ -16,14 +16,8 @@ export default class HomeView extends React.Component{
           <View>
                 <Text>t'es dans HomeView</Text>
                 
-         
-            <Button
-            onPress={() => navigate('TranslateView')}
-            title="Enregistrer"
-            color='#841584'
-            accessibilityLabel="Learn more about this purple button"
-            />
-        
+                <ButtonRecord redirect={this.props.navigation}/>
+
           </View>
          
      

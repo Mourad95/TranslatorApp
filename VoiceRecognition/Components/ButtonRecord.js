@@ -1,8 +1,11 @@
 import React from 'react';
-import {Button} from 'react-native';
-import TranslateView from '../Views/TranslateView'
+
+import { Button } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
+
 import Styles from '../Styles/Styles';
-import { StackNavigator } from 'react-navigation'
+
 
 export default class ButtonRecord extends React.Component{
     
@@ -13,8 +16,17 @@ export default class ButtonRecord extends React.Component{
 
 
     render(){
-        //const { navigate } = this.props.navigation;
-        
+
+        return(
+            <Button
+            onPress={() => this.props.redirect.navigate('Translate')}
+            title="Enregistrer"
+            color='#841584'
+            accessibilityLabel="Learn more about this purple button"
+            
+            />
+        )
+
 
     }
   

@@ -1,33 +1,33 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { StackNavigator } from 'react-navigation'
 
-// Import des classes et du style
+import { StackNavigator } from 'react-navigation';
+
+
+// Import classes and styles 
 import HomeView from './Views/HomeView'
 import TranslateView from './Views/TranslateView'
 import Styles from './Styles/Styles'
 
-const AppNavigator = StackNavigator({
-  HomeView: { screen: HomeView },
-  TranslateView: { screen: TranslateView }
+//navigation vers les différentes vues
+const Nav = StackNavigator({
+  Home: { screen: HomeView },
+  Translate: { screen: TranslateView }
+}, {
+  initialRouteName: 'Home', 
+})
 
-});
+
 
 
 
 export default class App extends React.Component {
-  
-  
-  render() { // Fonction obligatoire pour chaque classe
-    
-    return ( // Retourne des éléments enveloppés dans un élément parent. Ici, View.
-      <View style={Styles.container}>
 
-        <AppNavigator/>
-        <HomeView />
+  render() {
+    return ( // Return one parent element only, HomeView and TranslateView must be wrapped in one parent View
+      <Nav/>
+    ); 
 
-      </View>
-    );
   }
 }
 
